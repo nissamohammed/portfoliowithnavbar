@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -24,10 +25,10 @@ function Header() {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link href="/" className="fw-bolder text-light">Home</Nav.Link>
-                <Nav.Link href="/about" className="fw-bolder text-light">About</Nav.Link>
-                <Nav.Link href="/myworks" className="fw-bolder text-light">Projects</Nav.Link>
-                <Nav.Link href="/contact" className="fw-bolder text-light">Contact</Nav.Link>
+                <Link to={'/'} className="fw-bolder text-light me-3" style={{textDecoration:'none'}}>Home</Link>
+                <Link to={'/about'} className="fw-bolder text-light me-3" style={{textDecoration:'none'}}>About</Link>
+                <Link to={'/myworks'} className="fw-bolder text-light me-3" style={{textDecoration:'none'}}>Projects</Link>
+                <Link to={'/contact'} className="fw-bolder text-light me-3" style={{textDecoration:'none'}}>Contact</Link>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
